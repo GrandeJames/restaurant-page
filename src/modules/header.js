@@ -2,6 +2,7 @@ export function addHeader(parentElement) {
   const header = document.createElement("header");
 
   const h1 = document.createElement("h1");
+
   h1.textContent = "FOODIES";
 
   const nav = document.createElement("nav");
@@ -17,8 +18,6 @@ export function addHeader(parentElement) {
   nav.appendChild(a1);
   nav.appendChild(a2);
   nav.appendChild(a3);
-
-  console.log("aaa");
 
   header.appendChild(h1);
   header.appendChild(nav);
