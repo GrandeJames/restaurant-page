@@ -18,5 +18,10 @@ export function addHeader(parentElement) {
   nav.appendChild(a2);
   nav.appendChild(a3);
 
-  parent.appendChild(header);
+  console.log("aaa");
+
+  header.appendChild(h1);
+  header.appendChild(nav);
+
+  parentElement.appendChild(header);
 }
