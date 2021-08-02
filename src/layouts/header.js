@@ -12,8 +12,13 @@ export function addHeader(parentElement) {
   const a2 = document.createElement("a");
 
   a1.textContent = "HOME";
+  a1.id = "home-link";
+
   a2.textContent = "MENU";
+  a2.id = "menu-link";
+
   a3.textContent = "CONTACT";
+  a3.id = "contact-link";
 
   nav.appendChild(a1);
   nav.appendChild(a2);
