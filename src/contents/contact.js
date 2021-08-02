@@ -9,16 +9,16 @@ function addContact() {
   main.id = "contact-container";
 
   addHeading(main);
-
   addContactSection(main);
-
   addAvailableTimesSection(main);
 }
 
 function addHeading(parentElement) {
   const h2 = document.createElement("h2");
+
   h2.className = "content-heading";
   h2.textContent = "Contact Us";
+
   parentElement.appendChild(h2);
 }
 
