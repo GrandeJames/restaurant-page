@@ -16,16 +16,16 @@ function loadListeners() {
 }
 
 function addContactListener() {
-  addClickListener("#contact-link", () => contents.loadContact());
+  addClickListener("#contact-link", contents.loadContact);
 }
 
 function addMenuListener() {
-  addClickListener("#menu-link", () => contents.loadMenu());
-  addClickListener("#menu-button", () => contents.loadMenu());
+  addClickListener("#menu-link", contents.loadMenu);
+  addClickListener("#menu-button", contents.loadMenu);
 }
 
 function addHomeListener() {
-  addClickListener("#home-link", () => contents.loadHome());
+  addClickListener("#home-link", contents.loadHome);
 }
 
 function addClickListener(selector, loader) {

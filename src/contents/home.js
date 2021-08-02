@@ -1,8 +1,10 @@
 import background from "../images/home-background.jpg";
 import { loadContent } from "../components/loadContent";
+import { loadMenu } from ".";
 
 export function loadHome() {
   loadContent(addHome);
+  addMenuButtonListener();
 }
 
 function addHome(parentElement) {
@@ -28,4 +30,9 @@ function addHome(parentElement) {
 
   parentElement.appendChild(topSection);
   parentElement.appendChild(bottomSection);
+}
+
+function addMenuButtonListener() {
+  const menuButton = document.querySelector("#menu-button");
+  menuButton.addEventListener("click", loadMenu);
 }
