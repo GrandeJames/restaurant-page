@@ -6,10 +6,29 @@ init();
 
 function init() {
   loadDashboard();
+  loadListeners();
+}
+
+function loadListeners() {
   addContactListener();
+  addHomeListener();
+  addMenuListener();
 }
 
 function addContactListener() {
-  const contactLink = document.querySelector("#contact-link");
-  contactLink.addEventListener("click", () => contents.loadContact());
+  addClickListener("#contact-link", () => contents.loadContact());
+}
+
+function addMenuListener() {
+  addClickListener("#menu-link", () => contents.loadMenu());
+  addClickListener("#menu-button", () => contents.loadMenu());
+}
+
+function addHomeListener() {
+  addClickListener("#home-link", () => contents.loadHome());
+}
+
+function addClickListener(selector, loader) {
+  const element = document.querySelector(selector);
+  element.addEventListener("click", loader);
 }
