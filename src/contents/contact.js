@@ -4,44 +4,59 @@ export function loadContact() {
   loadContent(addContact);
 }
 
-function addContact(parentElement) {
+function addContact() {
+  const main = document.querySelector("main");
+  main.id = "contact-container";
+
+  addHeading(main);
+
+  addContactSection(main);
+
+  addAvailableTimesSection(main);
+}
+
+function addHeading(parentElement) {
   const h2 = document.createElement("h2");
-  h2.className = "page-headings";
+  h2.className = "content-heading";
   h2.textContent = "Contact Us";
   parentElement.appendChild(h2);
+}
 
-  const div1 = document.createElement("div");
-  div1.id = "contact-container";
+function addContactSection(parentElement) {
+  const section = document.createElement("section");
+  section.id = "contact-section";
 
   const p1 = document.createElement("p");
-  p1.textContent = "Phone: 123-456-7890";
-  div1.appendChild(p1);
-
   const p2 = document.createElement("p");
+
+  p1.textContent = "Phone: 123-456-7890";
   p2.textContent = "Email: name@example.com";
-  div1.appendChild(p2);
 
-  const div2 = document.createElement("div");
-  div2.id = "available-times-container";
+  section.appendChild(p1);
+  section.appendChild(p2);
 
+  parentElement.appendChild(section);
+}
+
+function addAvailableTimesSection(parentElement) {
+  const section = document.createElement("section");
+  section.id = "available-times-section";
+
+  const p1 = document.createElement("p");
+  const p2 = document.createElement("p");
   const p3 = document.createElement("p");
-  p3.textContent = "Monday - Friday";
-  div1.appendChild(p3);
-
   const p4 = document.createElement("p");
-  p4.textContent = "7:00 AM - 10:00 PM";
-  div1.appendChild(p4);
 
-  div2.appendChild(document.createElement("br"));
+  p1.textContent = "Monday - Friday";
+  p2.textContent = "7:00 AM - 10:00 PM";
+  p3.textContent = "Saturday - Sunday";
+  p4.textContent = "9:00 AM - 10:00 PM";
 
-  const p5 = document.createElement("p");
-  p5.textContent = "Saturday - Sunday";
-  div2.appendChild(p5);
+  section.appendChild(p1);
+  section.appendChild(p2);
+  section.appendChild(document.createElement("br"));
+  section.appendChild(p3);
+  section.appendChild(p4);
 
-  const p6 = document.createElement("p");
-  p6.textContent = "9:00 AM - 10:00 PM";
-  div2.appendChild(p6);
-
-  parentElement.appendChild(div1);
-  parentElement.appendChild(div2);
+  parentElement.appendChild(section);
 }
