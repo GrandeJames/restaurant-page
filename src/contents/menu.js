@@ -10,31 +10,42 @@ function addMenu(parentElement) {
   main.id = "menu-container";
 
   addHeading(main, "Our Menu");
-  addDinnerSection(main);
+  addAppetizerSection(main);
+  addEntreeSection(main);
 }
 
-function addDinnerSection(parentElement) {
-  /*
-    Section (id=food-section flex: column) GOOD TODO: fix styling later if needed
-        h3 Dinner GOOD TODO: change color maybe
-        <div class="food-info"> (flex: spacebetween) GOOD
-            <p>Steak</p>
-            <p>14.95</p>
-        </div>
-    */
-
+function addAppetizerSection(parentElement) {
   const section = document.createElement("section");
 
-  section.id = "food-section";
+  section.className = "food-section";
 
-  const h3 = document.createElement("h3");
-  h3.textContent = "Dinner";
-  section.appendChild(h3);
+  addSectionHeading(section, "Appetizer");
+
+  addFoodInfo(section, "Gyoza", "$4.95");
+  addFoodInfo(section, "Calamari", "$6.95");
+  addFoodInfo(section, "Shrimp Tampura", "$6.95");
+
+  parentElement.appendChild(section);
+}
+
+function addEntreeSection(parentElement) {
+  const section = document.createElement("section");
+
+  section.className = "food-section";
+
+  addSectionHeading(section, "Entree");
 
   addFoodInfo(section, "Steak", "$14.95");
   addFoodInfo(section, "Chicken", "$11.95");
+  addFoodInfo(section, "Fish", "$14.95");
 
   parentElement.appendChild(section);
+}
+
+function addSectionHeading(section, textContent) {
+  const h3 = document.createElement("h3");
+  h3.textContent = textContent;
+  section.appendChild(h3);
 }
 
 function addFoodInfo(parentElement, foodName, foodPrice) {

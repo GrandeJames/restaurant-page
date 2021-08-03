@@ -65,15 +65,16 @@ h1 {
 section {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   width: 100%;
   margin-bottom: 7vh;
   padding: 0 10vw;
 }
 
-#food-section {
+.food-section {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
 }
 
 .food-info {
@@ -99,6 +100,6 @@ button {
   border-radius: 5px;
 }
 
-p {
-  color: white;
+h3 {
+  color: var(--color-accent);
 }
