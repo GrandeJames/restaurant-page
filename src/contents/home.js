@@ -21,6 +21,7 @@ function addHome() {
   main.appendChild(button);
 }
 
+// Must be loaded each time because it gets removed
 function addMenuButtonListener() {
   const menuButton = document.querySelector("#menu-button");
   menuButton.addEventListener("click", loadMenu);
