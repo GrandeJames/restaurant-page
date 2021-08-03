@@ -1,5 +1,5 @@
 import { loadContent } from "../components/loadContent.js";
-import { addHeading } from "../components/content-heading.js";
+import { addHeading } from "../components/addHeading.js";
 
 export function loadContact() {
   loadContent(addContact);
