@@ -1,4 +1,5 @@
 import { loadContent } from "../components/loadContent.js";
+import { addHeading } from "../components/content-heading.js";
 
 export function loadContact() {
   loadContent(addContact);
@@ -8,22 +9,14 @@ function addContact() {
   const main = document.querySelector("main");
   main.id = "contact-container";
 
-  addHeading(main);
+  addHeading(main, "Contact Us");
   addContactSection(main);
   addAvailableTimesSection(main);
 }
 
-function addHeading(parentElement) {
-  const h2 = document.createElement("h2");
-
-  h2.className = "content-heading";
-  h2.textContent = "Contact Us";
-
-  parentElement.appendChild(h2);
-}
-
 function addContactSection(parentElement) {
   const section = document.createElement("section");
+
   section.id = "contact-section";
 
   const p1 = document.createElement("p");
