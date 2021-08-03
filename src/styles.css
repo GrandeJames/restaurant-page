@@ -35,7 +35,7 @@ main {
 }
 
 #home-container {
-  padding-top: 40vh;
+  padding-top: 37vh;
 }
 
 #contact-container,
@@ -90,7 +90,7 @@ a {
 }
 
 button {
-  margin-top: 3rem;
+  margin-top: 2rem;
   width: 7rem;
   height: 3rem;
   background-color: var(--color-accent);
