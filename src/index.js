@@ -32,3 +32,9 @@ function addClickListener(selector, loader) {
   const element = document.querySelector(selector);
   element.addEventListener("click", loader);
 }
+
+// Must be loaded each time because it gets removed when the content is cleared
+export function addMenuButtonListener() {
+  const menuButton = document.querySelector("#menu-button");
+  menuButton.addEventListener("click", contents.loadMenu);
+}
